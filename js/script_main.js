@@ -64,11 +64,17 @@ $(window).on('scroll resize', function(){
       $('section.approach .inner .list li a').removeClass('on');
     }
   }
-  
+
+  // 2. 스크롤 이벤트
   $(function(){
     $('.animate').scrolla({
       mobile: true, // 모바일 사용 여부
       once: false // 스크롤시 한번만 사용할경우 true 계속 스크롤 될때마다 사용될거면 false
     })
   });
+
+  // 3. 텍스트 애니메이션
+  $(function(){
+    Splitting();
+  })
 })

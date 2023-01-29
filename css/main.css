@@ -146,6 +146,7 @@ header.on .gnbBtn, header.on .contact {
   font-weight: bold;
   font-size: 70px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* x축:0 y축:0 blur:10;px */
+  text-transform: uppercase;
 }
 
 /* .inner => 전체 레이아웃 넓이 공통부분 */
@@ -503,4 +504,28 @@ footer .inner .sns li {
   margin: 0 40px;
   font-weight: bold;
   font-size: 17px;
+}
+
+/* 텍스트 애니메이션 */
+@keyframes textAni {
+  0% {opacity: 0;}
+  30% {opacity: 0;}
+}
+/* visual 텍스트 애니메이션 */
+.visual .title.motion .char {
+  animation: textAni 2s both;
+  animation-delay: calc(0.08s * var(--char-index)); /* 글자 하나씩 순서대로 나타나도록 적용 */
+}
+/* .text 공동 텍스트 애니메이션 */
+.text.motion .word {
+  animation: textAni 0.8s both;
+  animation-delay: calc(0.02s * var(--word-index))
+}
+/* service 텍스트 애니메이션 */
+.text.motion a {
+  animation: border 1s both;
+}
+@keyframes border {
+  0% {border-color:transparent;}
+  60% {border-color:transparent;}
 }
