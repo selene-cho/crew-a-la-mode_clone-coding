@@ -15,6 +15,7 @@ $(window).on('scroll resize', function(){
   scrollPos = $(document).scrollTop(); // html document의 scrollTop의 위치 값이 변수 scrollPos에 담김
   fix(); // fix 함수 호출 (아래에 함수 만들어 줌)
   fixHeader();
+  fixList();
 
   function fix(){
     // 스크롤 위치값 1250보다 클 경우 (밑으로 내려갈 수록 숫자 큼) on 클래스 붙임 -> .fix .text 위치 bottom:10% 에서 위로 올라오면서 position fix로 바뀜
@@ -34,6 +35,33 @@ $(window).on('scroll resize', function(){
     }
     else{
       $('header').removeClass('on') // header에 on클래스 제거
+    }
+  }
+
+  function fixList(){
+    $('section.approach .inner .list li a').removeClass('on');
+    if(scrollPos > 1250){
+      $('section.approach .inner .list li a').removeClass('on');
+      $('section.approach .inner .list li:eq(0) a').addClass('on');
+      // scorllPos > 1250 일때, .list li a 에 붙은 on클래스 제거 list의 0번째 인덱스에 on클래스 더함.
+      // eq() : 인덱스 값 사용해서 원하는 위치의 요소 선택해서 가져올 수 있는 선택자 메소드
+    }
+    if(scrollPos > 1650){
+      $('section.approach .inner .list li a').removeClass('on');
+      $('section.approach .inner .list li:eq(1) a').addClass('on');
+    }
+      // scorllPos > 1250 일때, .list li a 에 붙은 다른 on클래스 제거 list의 1번째 인덱스에 on클래스 더함.
+
+    if(scrollPos > 2050){
+      $('section.approach .inner .list li a').removeClass('on');
+      $('section.approach .inner .list li:eq(2) a').addClass('on');
+    }
+    if(scrollPos > 2550){
+      $('section.approach .inner .list li a').removeClass('on');
+      $('section.approach .inner .list li:eq(3) a').addClass('on');
+    }
+    if(scrollPos > 2900){
+      $('section.approach .inner .list li a').removeClass('on');
     }
   }
 })
