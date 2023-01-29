@@ -275,7 +275,6 @@ section.approach .inner .list li a.on span b, section.approach .inner .list li a
   font-style: normal;
 }
 
-
 /* section.sectors */
 section.sectors {
   background: #f2f0eb;
@@ -317,7 +316,7 @@ section.sectors .list li a h3{
   letter-spacing: 1px; /* 자간 간격 */
   transition: all 0.4s; /* hover 나갈 때도 부드럽게 표현되기 위함  */
 }
-
+/* section.sercotrs - 모션 */
 section.sectors .list li a:hover img, section.sectors .list li a:focus img {
   transform: scale(1.2);
   transition: all 1s;
@@ -325,6 +324,26 @@ section.sectors .list li a:hover img, section.sectors .list li a:focus img {
 section.sectors .list li a:hover h3, section.secotrs .list li a:focus h3 {
   letter-spacing: 4px;
   transition: all 0.5s;
+}
+section.sectors .list.motion li {
+  animation-name: sectors;
+  animation-duration: 1s;
+}
+section.sectors .list.motion li:nth-child(2) {
+  animation-duration: 1.15s;
+}
+section.sectors .list.motion li:nth-child(3) {
+  animation-duration: 1.3s;
+}
+@keyframes sectors{
+  0% { 
+    opacity: 0;
+    transform: translateX(1000px);
+  }
+  30% { 
+    opacity: 0;
+    transform: translateX(1000px);
+  } /* 100%일때는 따로 지정하지 않아도 알아서 자기 자리로 옴 */
 }
 
 /* section.service */
@@ -347,6 +366,21 @@ section.service .img img {
 section.service .text {
   width: 45%;
   float: right;
+}
+/* section.service -모션 */
+section.service .img.motion {
+  animation-name: service;
+  animation-duration: 1s;
+}
+@keyframes service {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  30% { /* 0%~30%까지 위치 유지*/
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
 }
 
 /* section.journal */
@@ -405,6 +439,32 @@ section.journal .list li a p {
   -webkit-box-orient: vertical; /* 박스 수직 방향 배치 */
   text-align: justify; /* 이 영역안에서 text 양쪽정렬 */
 }
+
+/* section.journal -모션 */
+section.journal .list.motion li {
+  animation-name: journal;
+  animation-duration: 0.5s;
+}
+section.journal .list.motion li:nth-child(2) {
+  animation-duration: 0.6s;
+}
+section.journal .list.motion li:nth-child(3) {
+  animation-duration: 0.7s;
+}
+section.journal .list.motion li:nth-child(4) {
+  animation-duration: 0.8s;
+}
+@keyframes journal {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+}
+
 
 /* FOOTER */
 

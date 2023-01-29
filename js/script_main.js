@@ -64,4 +64,11 @@ $(window).on('scroll resize', function(){
       $('section.approach .inner .list li a').removeClass('on');
     }
   }
+  
+  $(function(){
+    $('.animate').scrolla({
+      mobile: true, // 모바일 사용 여부
+      once: false // 스크롤시 한번만 사용할경우 true 계속 스크롤 될때마다 사용될거면 false
+    })
+  });
 })
