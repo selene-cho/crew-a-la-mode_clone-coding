@@ -109,7 +109,55 @@ header.on .gnbBtn, header.on .contact {
   margin-top: 4px;
   transition: all 0.4s;
 }
-
+/* gnb */
+nav.gnb {
+  position: absolute; /* 부모요소인 header position:fixed 기준 */
+  left: -1000px; /* 메뉴바 숨기기 위해 왼쪽 밖으로 보냄 */
+  top: 0;
+  background: #000;
+  color: #fff;
+  width: 400px;
+  height: 100vh;
+  padding: 95px 50px;
+  box-sizing: border-box; /* box-sizing으로 해서 지정해준 너비값 안에 padding 포함되도록 */
+  text-align: left;
+  transition: all 0.7s; /* 열릴때 부드럽게 */
+  overflow: hidden; /* 넘치는 부분 감싸 */
+}
+nav.gnb ul {
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* 중앙으로 오도록 */
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+  padding: 20px 0;
+}
+nav.gnb ul li a {
+  text-align: left;
+  line-height: 50px;
+  font-size: 22px;
+}
+nav.gnb ul li a span {
+  text-transform: none; /* uppercase 되어있기 때문에 */
+  font-family: 'Nanum Myeongjo', serif;
+  font-style: italic;
+  font-size: 20px;
+}
+/* header.on 붙을 때 gnb 디자인 */
+header.on nav.gnb {
+  width: 300px;
+  transition: all 0.4s;
+}
+header.on nav.gnb ul {
+  width: 50%;
+}
+/* gnb.on */
+nav.gnb.on {
+  width: 400px;
+  left: 0;
+}
 
 /* CONTENTS */
 .contents {

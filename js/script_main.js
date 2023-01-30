@@ -78,3 +78,16 @@ $(window).on('scroll resize', function(){
     Splitting();
   })
 })
+
+/* gnb 메뉴 */
+$(function(){
+  $('header .gnbBtn').on('click', function(){
+    $('header nav.gnb').toggleClass('on');
+  });
+  $('.contents').on('click', function(){
+    $('header nav.gnb').removeClass('on');
+  });
+})
+/* header의 .gnbBtn 클릭할 경우 nav.gnb에 on클래스 붙음.
+  contents 클릭할 때 nav.gnb에 붙은 on클래스 제거.
+*/
