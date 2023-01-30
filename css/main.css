@@ -651,3 +651,22 @@ footer .inner .sns li {
   footer .inner .sns {width: 100%; justify-content: space-between;}
   footer .inner .sns li {margin: 0;}
 }
+@media screen and (max-width:768px) {
+  section.service .inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  section.service .img {width: 100%;}
+  section.service .text {width: 100%; margin-bottom: 50px;}
+  section.journal {padding: 30% 0 100px;}
+  section.journal .list {flex-wrap: wrap;}
+  section.journal .list li {width: 48.5%; margin-bottom: 20px;}
+  section.journal .list li a .img {height: auto;}
+  section.journal .list li a .img img{
+    width: 100%;
+    height: auto;
+    position: static;
+    transform: none;
+  }
+}
