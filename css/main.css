@@ -585,3 +585,69 @@ footer .inner .sns li {
   section.journal .list li {width: 220px;}
   section.journal .list li a .img {height: 220px;}
 }
+@media screen and (max-width:1024px) {
+  .contents .visual .title {font-size: 50px;}
+  section.about .inner .text p, .text p {font-size: 28px;}
+  section.approach .inner .list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  section.approach .inner .list li {
+    width: 48.5%;
+    margin-bottom: 20px;
+  }
+  section.approach .inner .list li:last-child {
+    margin-bottom: 20px;
+  }
+  /* position 기본값으로 초기화 */
+  section.approach .inner .fix {
+    position:static;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  section.approach .inner .fix .text {position:static} 
+  section.approach .inner .fix .text.on {position:static; transform: none} 
+  section.approach .inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse; /* 이미지보다 글씨가 먼저 오도록 순서바꿈 */
+  }
+  section.approach .inner .list li a.on:after, section.approach .inner .list li a:hover:after {
+    display: none; /* hover 효과 삭제 */
+  }
+
+  /* on클래스가 붙거나 hover하거나 on클래스가 붙지않아도! 이미지 위에 흰 글씨 보이게 */
+  section.approach .inner .list li a.on span, section.approach .inner .list li a:hover span, section.approach .inner .list li a span {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-style: italic;
+  }
+  /* on클래스가 붙거나 hover하거나 on클래스 붙지 않아도 보이게*/
+  section.approach .inner .list li a.on span b, section.approach .inner .list li a:hover span b, section.approach .inner .list li a span b {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+  }
+  section.sectors {
+    padding: 100px 0 20%;
+    margin-bottom: 15%;
+  }
+  section.secotrs .list{bottom: -18%;}
+  section.journal {padding: 25% 0 100px;}
+  footer .inner {flex-wrap: wrap;}
+  footer .inner .footerLogo{width: 100%;}
+  .contents{margin-bottom: 330px;}
+  footer {height: 330px;}
+  footer .inner .contact {width: 100%; margin: 20px 0;}
+  footer .inner .sns {width: 100%; justify-content: space-between;}
+  footer .inner .sns li {margin: 0;}
+}
