@@ -73,6 +73,7 @@ header .inner .gnbBtn {
   position: relative; /* 자기 자신 기준 배치 */
   margin-top: 15px;
   transition: all 0.4s;
+  z-index: 200;
 }
 
 header .inner .gnbBtn span {
@@ -669,4 +670,27 @@ footer .inner .sns li {
     position: static;
     transform: none;
   }
+}
+@media screen and (max-width:500px) {
+  header{padding: 20px 0 18px;}
+  header .inner .gnbBtn, header.on .inner .gnbBtn {width: 22px; margin-top: 5px;}
+  header .inner .logo, header.on .inner .logo {font-size: 18px;}
+  header .ineer .contact {display: none;}
+  nav.gnb.on, header.on nav.gnb {width: 100%; padding: 0;}
+  nav.gnb ul, header.on nav.gnb ul{width: 50%;}
+  .contents .visual .title {font-size: 32px;}
+  section.about .inner .text p, .text p {font-size: 22px;}
+  section.about, section.approach {padding:80px 0;}
+  section.approach .inner .list li {width: 100%;}
+  section.sectors {padding: 80px 0 85%; margin-bottom: 120%;}
+  section.sectors .list {flex-wrap: wrap; bottom: -82%;}
+  section.sectors .list li {width: 100%; margin-bottom: 15px;}
+  section.journal {padding:60% 0 80px;}
+  section.journal h2 {font-size: 25px;}
+  section.journal .list li {width: 100%;}
+  section.journal .list li:nth-child(2)~* {display: none;}
+  footer {height: 280px; padding: 50px 0;}
+  footer .inner .footerLogo {font-size: 35px; text-align: center;}
+  footer .inner .sns li {font-size: 13px;}
+  .contents {margin-bottom: 280px;}
 }
