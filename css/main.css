@@ -577,3 +577,11 @@ footer .inner .sns li {
   0% {border-color:transparent;}
   60% {border-color:transparent;}
 }
+
+/* 반응형 웹 */
+@media screen and (max-width:1400px) {
+  .inner {width: 90%;}
+  section.sectors .list {width: 90%;}
+  section.journal .list li {width: 220px;}
+  section.journal .list li a .img {height: 220px;}
+}
